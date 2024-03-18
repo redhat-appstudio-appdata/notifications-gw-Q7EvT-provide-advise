@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: notifications-gw
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/hcc-notifications-tenant/notifications-gw/notifications-gw@sha256:75763f1579201f3a68dfd42e765273ad6ff19ffb09b10280291b7fe0fd010e1c
+        name: my-java-quarkus
+        resources: {}
+status: {}

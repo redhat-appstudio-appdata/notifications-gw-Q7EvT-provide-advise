@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: notifications-gw
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: notifications-gw
+    app.kubernetes.io/part-of: notifications-gw
+  name: notifications-gwnc4s
+spec:
+  path: /
+  port:
+    targetPort: 8086
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: notifications-gw
+    weight: null
+status: {}
