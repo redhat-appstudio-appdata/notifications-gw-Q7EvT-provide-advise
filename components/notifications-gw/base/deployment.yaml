@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: notifications-gw
     spec:
       containers:
-      - image: quay.io/redhat-user-workloads/hcc-notifications-tenant/notifications-gw/notifications-gw@sha256:3a32a725126ce4d86673fbfa1302d207fc149c312c1c355fc25b3aa5c9e60ff5
+      - image: quay.io/redhat-user-workloads/hcc-notifications-tenant/notifications-gw/notifications-gw@sha256:defd528f13f69486e1819cba3c211e47ae54c29e6734197a05a16130355171c2
         name: my-java-quarkus
         ports:
         - containerPort: 8081
